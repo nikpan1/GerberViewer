@@ -1,9 +1,12 @@
-#ifdef SELECTAP_H
+#ifndef SELECTAP_H
 #define SELECTAP_H
 
 #include <string>
 #include "Settings.h"
 #include "Instruction.h" 
+
+// Example
+// D10*
 
 namespace gv {
   class SelectAP {
@@ -11,7 +14,7 @@ namespace gv {
       SelectAP(const std::string& line) {
         Setup(line);        
       }
-      void Execute(const gv::Settings setting) override {
+      void Execute(const gv::Settings setting) {
       }
 
     private:
