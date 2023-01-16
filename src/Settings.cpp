@@ -40,3 +40,18 @@ std::ostream& operator<<(std::ostream& os, const gv::Settings& obj) {
   return os; 
 }
 
+#ifdef gvDEBUG
+
+const std::string gv::Settings::Debug() {
+  std::ostringstream stream;
+    stream << 
+    FSLA.x << " " << FSLA.y << " " << SF.x << 
+    " " << SF.y << " " << MO << " " << MI.x <<
+    " " << MI.y << " " << IP;
+  
+  const std::string result = stream.str();
+
+  return result;
+}
+
+#endif 

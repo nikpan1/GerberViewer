@@ -1,6 +1,8 @@
-#include <string>
+#include <sstream> 
+
 #include "Cords.h" 
 #include "Core.cpp"
+#include "strManipulation.cpp"
 
 #ifndef SETTINGS_H
 #define SETTINGS_H 
@@ -27,6 +29,10 @@ public:
   MO_TYPE MO;
   Cords MI;
   IP_TYPE IP;
+
+#ifdef gvDEBUG 
+  const std::string Debug();
+#endif 
 };
 
 
