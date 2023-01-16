@@ -1,3 +1,5 @@
+#include <sstream> 
+
 #include "Cords.h" 
 #include "Core.cpp"
 
@@ -26,7 +28,11 @@ class Aperture {
     int index;
 
     bool operator==(const gv::Aperture& obj) const; 
- 
+
+#ifdef gvDEBUG
+  std::string Debug();
+#endif
+
 };
 
 #endif 

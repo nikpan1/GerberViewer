@@ -8,6 +8,7 @@ gv::Aperture gv::Registers::operator[](int index) const {
     }
   }
 
+  gvLOG("Warning, Registers");
   return gv::Aperture(gv::CIRCLE, 1, 1);
 }
 
@@ -17,6 +18,10 @@ void gv::Registers::Add(gv::Aperture aperture) {
 
 
 void gv::Registers::Setup(const std::string& line) {
+  gv::Aperture ap; 
+  ap.Setup(line);
+
+  Add(ap);
 }
 
 

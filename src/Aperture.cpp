@@ -54,3 +54,17 @@ void gv::Aperture::Setup(const std::string& line) {
   }
 
 }
+
+#ifdef gvDEBUG
+
+std::string gv::Aperture::Debug() {
+  std::ostringstream stream;
+    stream << type << " " << index << " " << pos.x << " " << pos.y;
+
+  const std::string result = stream.str();
+
+  return result;
+}
+
+#endif
+
