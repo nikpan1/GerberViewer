@@ -1,0 +1,9 @@
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/gerbv.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/install.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/install/local.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/install/strip.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/gerbv_autogen_timestamp_deps.dir
+/home/archbtw/Github/qtGerberViewer/build-gerbv-Desktop_Qt_6_6_0_GCC_64bit-Debug/CMakeFiles/gerbv_autogen.dir
