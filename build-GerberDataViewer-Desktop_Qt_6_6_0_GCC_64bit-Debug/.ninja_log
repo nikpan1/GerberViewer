@@ -1,0 +1,10 @@
+# ninja log v5
+4	273	1699907577735799904	build.ninja	8182eb259ac383f0
+3	281	1699907578022466921	GerberDataViewer_autogen/timestamp	87b2f114663f8ec4
+3	281	1699907578022466921	GerberDataViewer_autogen/mocs_compilation.cpp	87b2f114663f8ec4
+3	281	1699907578022466921	/home/archbtw/Github/qtGerberViewer/build-GerberDataViewer-Desktop_Qt_6_6_0_GCC_64bit-Debug/GerberDataViewer_autogen/timestamp	87b2f114663f8ec4
+3	281	1699907578022466921	/home/archbtw/Github/qtGerberViewer/build-GerberDataViewer-Desktop_Qt_6_6_0_GCC_64bit-Debug/GerberDataViewer_autogen/mocs_compilation.cpp	87b2f114663f8ec4
+281	2097	1699907579849135826	CMakeFiles/GerberDataViewer.dir/GerberDataViewer_autogen/mocs_compilation.cpp.o	4522c1c7f7e63342
+281	2152	1699907579902469224	CMakeFiles/GerberDataViewer.dir/main.cpp.o	8328cc9af7eaa819
+282	2385	1699907580132469506	CMakeFiles/GerberDataViewer.dir/mainwindow.cpp.o	eaaeed2ca9c5c390
+2385	2690	1699907580435803210	GerberDataViewer	7a6a6d7849b43b80
