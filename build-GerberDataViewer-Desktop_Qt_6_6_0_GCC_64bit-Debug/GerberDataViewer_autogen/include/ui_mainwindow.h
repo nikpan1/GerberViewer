@@ -11,13 +11,17 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,11 +32,17 @@ public:
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QGraphicsView *graphicsView;
+    QGraphicsView *canvas;
     QWidget *tab_2;
+    QTextEdit *textEditPreview;
     QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
+    QWidget *FileListArea;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QCheckBox *checkBox;
     QSlider *zoomSlider;
+    QPushButton *OpenFileButton;
+    QTextEdit *textEditFilename;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,25 +58,45 @@ public:
         tabWidget->setGeometry(QRect(140, 0, 621, 531));
         tab = new QWidget();
         tab->setObjectName("tab");
-        graphicsView = new QGraphicsView(tab);
-        graphicsView->setObjectName("graphicsView");
-        graphicsView->setGeometry(QRect(5, 11, 601, 481));
+        canvas = new QGraphicsView(tab);
+        canvas->setObjectName("canvas");
+        canvas->setGeometry(QRect(5, 11, 601, 481));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
+        textEditPreview = new QTextEdit(tab_2);
+        textEditPreview->setObjectName("textEditPreview");
+        textEditPreview->setGeometry(QRect(10, 10, 601, 481));
         tabWidget->addTab(tab_2, QString());
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(10, 70, 121, 461));
+        scrollArea->setGeometry(QRect(10, 130, 121, 401));
         scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 119, 459));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        FileListArea = new QWidget();
+        FileListArea->setObjectName("FileListArea");
+        FileListArea->setGeometry(QRect(0, 0, 119, 399));
+        verticalLayoutWidget = new QWidget(FileListArea);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(-1, -1, 121, 461));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        checkBox = new QCheckBox(verticalLayoutWidget);
+        checkBox->setObjectName("checkBox");
+
+        verticalLayout->addWidget(checkBox);
+
+        scrollArea->setWidget(FileListArea);
         zoomSlider = new QSlider(centralwidget);
-        zoomSlider->setObjectName("horizontalSlider");
+        zoomSlider->setObjectName("zoomSlider");
         zoomSlider->setGeometry(QRect(600, 530, 160, 16));
         zoomSlider->setOrientation(Qt::Horizontal);
+        OpenFileButton = new QPushButton(centralwidget);
+        OpenFileButton->setObjectName("OpenFileButton");
+        OpenFileButton->setGeometry(QRect(10, 80, 121, 31));
+        textEditFilename = new QTextEdit(centralwidget);
+        textEditFilename->setObjectName("textEditFilename");
+        textEditFilename->setGeometry(QRect(10, 30, 121, 31));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -78,7 +108,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -89,6 +119,8 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "CheckBox", nullptr));
+        OpenFileButton->setText(QCoreApplication::translate("MainWindow", "Open File", nullptr));
     } // retranslateUi
 
 };

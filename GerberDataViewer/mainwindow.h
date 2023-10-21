@@ -15,6 +15,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    QString fileContent;
+private slots:
+    void on_OpenFileButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
