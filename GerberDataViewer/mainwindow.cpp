@@ -44,7 +44,7 @@ void MainWindow::on_OpenFileButton_clicked()
     int startFilenameIndex = 0;
     for(int i = fn.size() - 1; i >= 0; i --) {
         if(fn[i] == '/') {
-            startFilenameIndex = i;
+            startFilenameIndex = i + 1;
             break;
         }
     }
