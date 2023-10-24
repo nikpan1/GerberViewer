@@ -1,3 +1,5 @@
+#include "Scanner.h"
+#include "Tokens.h"
 #include <iostream>
 #include <string>
 #include <vector>
