@@ -3,6 +3,7 @@
 #include <string>
 
 class Token {
+private:
   TokenType type;
 
   std::string lexeme;
@@ -10,6 +11,7 @@ class Token {
 
   int line;
 
+public:
   Token(TokenType _type, std::string _lexeme, std::string _literal, int _line);
   friend std::ostream &operator<<(std::ostream &s, const Token &obj);
 };

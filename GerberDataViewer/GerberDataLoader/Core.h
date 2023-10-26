@@ -9,6 +9,17 @@ enum TokenType {
   PERCENT,
 
   // one character tokens
+  LEFT_PAREN,
+  RIGHT_PAREN,
+  LEFT_BRACE,
+  RIGHT_BRACE,
+  COMMA,
+  DOT,
+  MINUS,
+  PLUS,
+  SEMICOLON,
+  SLASH,
+  STAR,
   SELECT, // D10*
 
   // two character tokens
@@ -24,4 +35,6 @@ enum TokenType {
   // special tokens
   // EOF ?
   NIL,
+  ENDL,
+  ENDF,
 };
