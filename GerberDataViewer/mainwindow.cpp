@@ -57,5 +57,25 @@ void MainWindow::on_OpenFileButton_clicked()
 
     ui->textEditPreview->clear();
     ui->textEditPreview->setPlainText(fileContent);
+
+
+
+    // Create a scene and a view
+    QGraphicsScene *scene = new QGraphicsScene(this);
+    QGraphicsView *view = new QGraphicsView(scene, this);
+    QGraphicsRectItem *rectangle1= scene->addRect(125, 25, 100, 100);
+    QGraphicsRectItem *rectangle2 = scene->addRect(0, 25, 100, 100);
+    ui->canvas->setScene(scene);
+
+    // Create a QPainter object
+    QPainter painter(ui->canvas);
+
+    // Set the color and style for the rectangle
+    painter.setPen(QPen(Qt::black, 2));
+    painter.setBrush(QBrush(Qt::blue));
+
+    // Draw a rectangle using the QPainter object
+    QRect rect(50, 50, 100, 75);
+    painter.drawRect(rect);
 }
 

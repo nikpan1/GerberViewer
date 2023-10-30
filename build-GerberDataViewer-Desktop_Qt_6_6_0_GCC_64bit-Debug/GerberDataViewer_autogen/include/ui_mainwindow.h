@@ -17,7 +17,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
-#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
@@ -40,7 +39,6 @@ public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QCheckBox *checkBox;
-    QSlider *zoomSlider;
     QPushButton *OpenFileButton;
     QTextEdit *textEditFilename;
     QMenuBar *menubar;
@@ -50,17 +48,17 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(800, 683);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(140, 0, 621, 531));
+        tabWidget->setGeometry(QRect(150, 30, 621, 531));
         tab = new QWidget();
         tab->setObjectName("tab");
         canvas = new QGraphicsView(tab);
         canvas->setObjectName("canvas");
-        canvas->setGeometry(QRect(5, 11, 601, 481));
+        canvas->setGeometry(QRect(10, 11, 601, 481));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
@@ -70,14 +68,14 @@ public:
         tabWidget->addTab(tab_2, QString());
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(10, 130, 121, 401));
+        scrollArea->setGeometry(QRect(20, 160, 121, 401));
         scrollArea->setWidgetResizable(true);
         FileListArea = new QWidget();
         FileListArea->setObjectName("FileListArea");
         FileListArea->setGeometry(QRect(0, 0, 119, 399));
         verticalLayoutWidget = new QWidget(FileListArea);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(-1, -1, 121, 461));
+        verticalLayoutWidget->setGeometry(QRect(9, -1, 111, 401));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -87,16 +85,12 @@ public:
         verticalLayout->addWidget(checkBox);
 
         scrollArea->setWidget(FileListArea);
-        zoomSlider = new QSlider(centralwidget);
-        zoomSlider->setObjectName("zoomSlider");
-        zoomSlider->setGeometry(QRect(600, 530, 160, 16));
-        zoomSlider->setOrientation(Qt::Horizontal);
         OpenFileButton = new QPushButton(centralwidget);
         OpenFileButton->setObjectName("OpenFileButton");
-        OpenFileButton->setGeometry(QRect(10, 80, 121, 31));
+        OpenFileButton->setGeometry(QRect(20, 110, 121, 31));
         textEditFilename = new QTextEdit(centralwidget);
         textEditFilename->setObjectName("textEditFilename");
-        textEditFilename->setGeometry(QRect(10, 30, 121, 31));
+        textEditFilename->setGeometry(QRect(20, 60, 121, 31));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -108,7 +102,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

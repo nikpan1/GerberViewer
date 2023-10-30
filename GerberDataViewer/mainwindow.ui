@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>683</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>0</y>
+      <x>150</x>
+      <y>30</y>
       <width>621</width>
       <height>531</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -33,7 +33,7 @@
      <widget class="QGraphicsView" name="canvas">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>10</x>
         <y>11</y>
         <width>601</width>
         <height>481</height>
@@ -60,8 +60,8 @@
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
+      <x>20</x>
+      <y>160</y>
       <width>121</width>
       <height>401</height>
      </rect>
@@ -81,10 +81,10 @@
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>-1</x>
+        <x>9</x>
         <y>-1</y>
-        <width>121</width>
-        <height>461</height>
+        <width>111</width>
+        <height>401</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -99,24 +99,11 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QSlider" name="zoomSlider">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>530</y>
-      <width>160</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QPushButton" name="OpenFileButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
+      <x>20</x>
+      <y>110</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -128,8 +115,8 @@
    <widget class="QTextEdit" name="textEditFilename">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>30</y>
+      <x>20</x>
+      <y>60</y>
       <width>121</width>
       <height>31</height>
      </rect>
