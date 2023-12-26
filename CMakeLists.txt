@@ -23,6 +23,9 @@ set(HEADERS
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+
+
 
 # Optionally, you can set additional compiler flags
 # For example, enabling warnings
