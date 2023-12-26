@@ -1,2 +1,1 @@
-# Ignore all directories beginning with "build"
-/[Bb]uild*/ 
+[Bb]uild/ 
