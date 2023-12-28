@@ -1,6 +1,5 @@
-#include "Parser.h"
 #include <iostream> 
-
+#include "Parser.h"
 
 int main(int argc, char** argv) {
   std::cout << "Starting the main.cpp.\n";
