@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 project(GerberViewer)
+
+# external libraries
+find_package(GTest REQUIRED)
+
+
 # Source files
 set(SOURCES
     src/main.cpp
@@ -21,22 +26,30 @@ set(HEADERS
 )
 
 # Executable
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}) 
 
-target_include_directories(${PROJECT_NAME} PUBLIC include)
-
-
+target_include_directories(${PROJECT_NAME} PUBLIC includer)
 # Check the build type
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    # Define functions for Debug mode
-    target_compile_definitions(MyExecutable PRIVATE gvDEBUG)
-    message("Building in Debug mode.")
+if(CMAKE_BUILD_TYPE STREQUAL "Tests") 
+  target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
+  enable_testing()
+  add_test(test ${PROJECT_NAME})
+  target_compile_definitions(${PROJECT_NAME} PRIVATE gvDEBUG)
+  message("Building in Tests mode.")
+
+elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  # Define functions for Debug mode
+  target_compile_definitions(${PROJECT_NAME} PRIVATE gvDEBUG)
+  message("Building in Debug mode.")
+
 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-    # Define functions for Release mode
-    target_compile_definitions(MyExecutable PRIVATE gvRELEASE)
-    message("Building in Release mode.")
+  # Define functions for Release mode
+  target_compile_definitions(${PROJECT_NAME} PRIVATE gvRELEASE)
+  message("Building in Release mode.")
+
 else()
-    message(FATAL_ERROR "Unknown build type. Set CMAKE_BUILD_TYPE to Debug or Release.")
+  message(FATAL_ERROR "Unknown build type. Set CMAKE_BUILD_TYPE to Debug or Release.")
+
 endif()
 
 

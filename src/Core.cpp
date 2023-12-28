@@ -1,35 +1,33 @@
 #include <iostream>
 
-// ANSI escape codes for text color
 #define RED_TEXT "\033[1;31m"
+#define GREEN_TEXT "\033[1;32m"
 #define RESET_TEXT "\033[0m"
 
-#define gdASSERT(condition, message) \
+
+#ifdef gvDEBUG
+
+#define gvASSERT(condition, message) \
   do { \
-    if (!(condition)) { \
-      std::cout << RED_TEXT << message << RESET_TEXT << std::endl; \
-    } \
+    if (!(condition)) std::cerr << RED_TEXT << "ASSERTION | " << RESET_TEXT << message << '\n'; \
   } while (false)
 
 
-#define gdEXCEPTION(message) \
+#define gvEXCEPTION(message) \
   do { \
-    std::cout << RED_TEXT << message << RESET_TEXT << std::endl; \
+    std::cerr << RED_TEXT << message << RESET_TEXT << '\n'; \
   } while(false)
 
+#define gvLOG(message) std::cout << message << '\n'; 
 
-#define gdPRINT(message) \
-    do { \
-        if (!(condition)) { \
-            std::cout << message << RESET_TEXT << std::endl; \
-        } \
-    } while (false)
+#endif 
 
 
-#define LOG(message) \
-    do { \
-        if (!(condition)) { \
-            std::cout << message << RESET_TEXT << std::endl; \
-        } \
-    } while (false)
+#ifdef gvRELEASE
 
+#define gvASSERT(condition, message)
+#define gvEXCEPTION(message) 
+#define gvLOG(message) 
+ 
+#endif
+ 
