@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from AddFunction
+[ RUN      ] AddFunction.PositiveNumbers
+[       OK ] AddFunction.PositiveNumbers (0 ms)
+[ RUN      ] AddFunction.NegativeNumbers
+[       OK ] AddFunction.NegativeNumbers (0 ms)
+[ RUN      ] AddFunction.Zero
+[       OK ] AddFunction.Zero (0 ms)
+[----------] 3 tests from AddFunction (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

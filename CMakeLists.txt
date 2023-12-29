@@ -1,9 +1,10 @@
 # --- CMake Template ---
 
-# Minimum required version of CMake
+# Minimum required version of CMake and Cpp 
 cmake_minimum_required(VERSION 3.12)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_COMPILER g++)
 
 
 project(GerberViewer)
@@ -14,21 +15,24 @@ find_package(GTest REQUIRED)
 
 # Source files
 set(SOURCES
-    src/main.cpp
-    src/Parser.cpp
-    src/Expression.cpp
+  src/main.cpp
+  src/Parser.cpp
+  src/Core.cpp
+  src/Expression.cpp
 )
 
 # Header files
 set(HEADERS
-    include/Parser.h
-    include/Expression.h
+  include/Parser.h
+  include/Expression.h
 )
 
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}) 
 
-target_include_directories(${PROJECT_NAME} PUBLIC includer)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+
+
 # Check the build type
 if(CMAKE_BUILD_TYPE STREQUAL "Tests") 
   target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})

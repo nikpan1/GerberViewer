@@ -3,11 +3,11 @@
 #include "Core.cpp"
 
 int main(int argc, char** argv) {
-  std::cout << "Starting the main.cpp.\n";
-  gvASSERT(argc != 2, "Wrong amount of inputs.\n");
-  
+  gvLOG("Starting the main.cpp.")
+  gvASSERT(argc == 2, "Wrong amount of inputs.");
+
   std::string str = argv[1];
-  auto v = gd::Parser(str);
+  auto v = gv::Parser(str);
   
   return 0;
 }

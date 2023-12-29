@@ -1,23 +1,20 @@
 #include "Parser.h"
 
 
-gd::Parser::Parser(const std::string& FILENAME) {
+gv::Parser::Parser(const std::string& FILENAME) {
   return;
   input.open(FILENAME);
   
-  if(!input.is_open()) {
-    std::cerr << "File not opened.\n";
-  }
-  
+  gvASSERT(!input.is_open(), "File is not opened.\n");
   output.clear();
 }
 
-gd::Expression gd::Parser::ParseLine(const std::string& line) {
-  gd::Expression result;
+gv::Expression gv::Parser::ParseLine(const std::string& line) {
+  gv::Expression result;
   return result;
 }
 
-std::vector<gd::Expression>& gd::Parser::Parse() {
+std::vector<gv::Expression>& gv::Parser::Parse() {
   std::string line;
 
   while(std::getline(input, line)) {

@@ -1,10 +1,12 @@
-#include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+
+#include "Core.cpp"
 #include "Expression.h"
 
 
-namespace gd {
+namespace gv {
 
 class Parser {
 public:

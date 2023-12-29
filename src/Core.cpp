@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 
 #define RED_TEXT "\033[1;31m"
 #define GREEN_TEXT "\033[1;32m"
@@ -10,6 +11,7 @@
 #define gvASSERT(condition, message) \
   do { \
     if (!(condition)) std::cerr << RED_TEXT << "ASSERTION | " << RESET_TEXT << message << '\n'; \
+    assert(condition);\
   } while (false)
 
 
@@ -18,7 +20,7 @@
     std::cerr << RED_TEXT << message << RESET_TEXT << '\n'; \
   } while(false)
 
-#define gvLOG(message) std::cout << message << '\n'; 
+#define gvLOG(message) std::cout << GREEN_TEXT << "   LOG    | " << RESET_TEXT << message << '\n'; 
 
 #endif 
 

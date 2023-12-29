@@ -1,7 +1,7 @@
 // base class of every expression
 
 
-namespace gd {
+namespace gv {
 
 class Expression {
 
