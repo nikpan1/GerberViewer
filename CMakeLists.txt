@@ -17,7 +17,7 @@ find_package(GTest REQUIRED)
 set(SOURCES
   src/main.cpp
   src/Parser.cpp
-  src/Core.cpp
+  src/Core/Core.cpp
   src/Expression.cpp
 )
 
@@ -29,6 +29,10 @@ set(HEADERS
 
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}) 
+
+include_directories(${CMAKE_SOURCE_DIR}/src
+  ${CMAKE_SOURCE_DIR}/include # is it needed? 
+  )
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 

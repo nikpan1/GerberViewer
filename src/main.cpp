@@ -1,6 +1,6 @@
 #include <iostream> 
 #include "Parser.h"
-#include "Core.cpp"
+#include "Core/Core.cpp"
 
 int main(int argc, char** argv) {
   gvLOG("Starting the main.cpp.")
