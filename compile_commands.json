@@ -1,0 +1,86 @@
+[
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/main.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/main.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/main.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/main.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/main.cpp"
+ },
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/Parser.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/Parser.cpp"
+ },
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/Core.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/Core.cpp"
+ },
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Expression.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Expression.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Expression.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/Expression.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/Expression.cpp"
+ }
+]

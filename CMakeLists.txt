@@ -17,7 +17,7 @@ find_package(GTest REQUIRED)
 set(SOURCES
   src/main.cpp
   src/Parser.cpp
-  src/Core/Core.cpp
+  src/Core.cpp
   src/Expression.cpp
 )
 
