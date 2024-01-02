@@ -32,4 +32,10 @@
 #define gvLOG(message) 
  
 #endif
- 
+
+
+struct cord {
+  double x; // @TODO change to union?
+  double y;
+};
+

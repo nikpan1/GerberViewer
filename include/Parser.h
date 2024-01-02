@@ -4,7 +4,7 @@
 
 #include "Core.cpp"
 #include "Expression.h"
-
+#include "GerberSettings.h"
 
 namespace gv {
 
