@@ -25,6 +25,9 @@ set(SOURCES
 set(HEADERS
   include/Parser.h
   include/Expression.h
+  include/Cords.h
+  include/Aperture.h
+  include/GerberSettings.h
 )
 
 # Executable

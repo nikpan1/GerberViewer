@@ -1,5 +1,5 @@
 #include "Expression.h"
-#include "Core.cpp"
+#include "Cords.h"
 
 namespace gv {
 
@@ -12,7 +12,7 @@ enum SHAPE {
 
 class Aperture : public gv::Expression {
   SHAPE shape;
-  cord size;
+  Cords size;
 };
 
 }

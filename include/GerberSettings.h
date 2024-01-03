@@ -1,4 +1,4 @@
-#include "Core.cpp"
+#include "Cords.h"
 
 namespace gv {
 
@@ -15,15 +15,16 @@ enum POLARITY {
 // FS = '%' ('FS' 'LA' 'X' coord_digits 'Y' coord_digits) '*%';
 // coord_digits = /[1-6][56]/;  
 struct FILE_SPEC {
-  cord integers;
-  cord fractionals;
+public:
+  Cords integers;
+  Cords fractionals;
 };
 
 
 class Settings {
-private:
+public:
   UNIT unit;
-  cord fileSpecification;
+  Cords fileSpecification;
 
   POLARITY polarity;
 };
