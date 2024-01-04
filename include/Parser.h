@@ -4,9 +4,11 @@
 
 #include "Core.cpp"
 #include "Expression.h"
-#include "GerberSettings.h"
+
 
 namespace gv {
+#ifndef PARSER_H
+#define PARSER_H
 
 class Parser {
 public:
@@ -19,5 +21,6 @@ public:
   std::vector<Expression>& Parse();  
 };
 
+#endif
 }
 

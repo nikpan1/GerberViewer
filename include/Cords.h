@@ -1,17 +1,18 @@
 
+namespace gv {
 #ifndef CORDS_H
 #define CORDS_H
 
-class Cords {
-public:
-    Cords(int _x, int _y) {
-      x = _x;
-      y = _y;
-    }
 
-    int x;
-    int y;
+class Cords {
+public: 
+  int x;
+  int y;
+
+  Cords(int _x, int _y) : x(_x), y(_y) {} 
+
 };
 
-#endif // CORDS_H
+#endif 
 
+}

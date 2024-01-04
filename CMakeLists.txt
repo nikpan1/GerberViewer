@@ -13,22 +13,25 @@ project(GerberViewer)
 find_package(GTest REQUIRED)
 
 
-# Source files
-set(SOURCES
-  src/main.cpp
-  src/Parser.cpp
-  src/Core.cpp
-  src/Expression.cpp
-)
-
 # Header files
 set(HEADERS
   include/Parser.h
-  include/Expression.h
   include/Cords.h
-  include/Aperture.h
-  include/GerberSettings.h
+  include/Expression.h
+  include/Drawable.h
 )
+
+
+# Source files
+set(SOURCES
+  src/Application.cpp
+  src/Parser.cpp
+  src/Core.cpp
+  src/Cords.cpp
+  src/Expression.cpp 
+  src/Drawable.cpp 
+)
+
 
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}) 

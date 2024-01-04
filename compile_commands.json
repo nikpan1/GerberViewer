@@ -10,15 +10,15 @@
    "-std=gnu++11",
    "-MD",
    "-MT",
-   "CMakeFiles/GerberViewer.dir/src/main.cpp.o",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o",
    "-MF",
-   "CMakeFiles/GerberViewer.dir/src/main.cpp.o.d",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o.d",
    "-o",
-   "CMakeFiles/GerberViewer.dir/src/main.cpp.o",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o",
    "-c",
-   "/home/archbtw/dev/GerberViewer/src/main.cpp"
+   "/home/archbtw/dev/GerberViewer/src/Application.cpp"
   ],
-  "file": "/home/archbtw/dev/GerberViewer/src/main.cpp"
+  "file": "/home/archbtw/dev/GerberViewer/src/Application.cpp"
  },
  {
   "directory": "/home/archbtw/dev/GerberViewer/build",
@@ -73,6 +73,27 @@
    "-std=gnu++11",
    "-MD",
    "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/Cords.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/Cords.cpp"
+ },
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
    "CMakeFiles/GerberViewer.dir/src/Expression.cpp.o",
    "-MF",
    "CMakeFiles/GerberViewer.dir/src/Expression.cpp.o.d",
@@ -82,5 +103,26 @@
    "/home/archbtw/dev/GerberViewer/src/Expression.cpp"
   ],
   "file": "/home/archbtw/dev/GerberViewer/src/Expression.cpp"
+ },
+ {
+  "directory": "/home/archbtw/dev/GerberViewer/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/dev/GerberViewer/src",
+   "-I/home/archbtw/dev/GerberViewer/include",
+   "-g",
+   "-std=gnu++11",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o",
+   "-c",
+   "/home/archbtw/dev/GerberViewer/src/Drawable.cpp"
+  ],
+  "file": "/home/archbtw/dev/GerberViewer/src/Drawable.cpp"
  }
 ]
