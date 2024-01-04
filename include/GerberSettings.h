@@ -1,3 +1,4 @@
+#include <fstream> 
 #include "Cords.h"
 
 namespace gv {
@@ -23,10 +24,16 @@ public:
 
 class Settings {
 public:
+  Settings(std::ifstream input);
+
   UNIT unit;
   Cords fileSpecification;
 
   POLARITY polarity;
+  
+  void ParseSettings();
+private:
+  std::ifstream input;
 };
 
 
