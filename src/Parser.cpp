@@ -28,6 +28,9 @@ std::vector<gv::Expression>& gv::Parser::Parse() {
   
   while(std::getline(input, line) && line[0] == '%') {
     // analyze settings and registers
+    if("ADD" == line.substr(1, 3)) {
+    }
+
   }
 
 
