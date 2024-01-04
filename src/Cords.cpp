@@ -26,7 +26,7 @@ double gv::Cords::GetX(const std::string& line) {
     i ++;
   }
 
-  return std::stoll(line.substr(start, i - start - 1));
+  return std::stoll(line.substr(start, i - start));
 
 }
 
@@ -51,7 +51,7 @@ double gv::Cords::GetY(const std::string& line) {
     i ++;
   }
 
-  return std::stoll(line.substr(start, i - start - 1));
+  return std::stoll(line.substr(start, i - start));
 
 
 }
@@ -77,6 +77,6 @@ double gv::Cords::GetData(char c, const std::string& line) {
     i ++;
   }
 
-  return std::stoll(line.substr(start, i - start - 1));
+  return std::stoll(line.substr(start, i - start));
 }
 

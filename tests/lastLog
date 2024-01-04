@@ -1,0 +1,58 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from GerberViewer
+[ RUN      ] GerberViewer.FSLA
+/home/archbtw/dev/GerberViewer/tests/test_Settings.cpp:8: Failure
+Expected equality of these values:
+  s.FSLA.x
+    Which is: 3
+  33.0
+    Which is: 33
+
+/home/archbtw/dev/GerberViewer/tests/test_Settings.cpp:9: Failure
+Expected equality of these values:
+  s.FSLA.y
+    Which is: 3
+  33.0
+    Which is: 33
+
+/home/archbtw/dev/GerberViewer/tests/test_Settings.cpp:12: Failure
+Expected equality of these values:
+  s.FSLA.x
+    Which is: 1
+  11.0
+    Which is: 11
+
+/home/archbtw/dev/GerberViewer/tests/test_Settings.cpp:13: Failure
+Expected equality of these values:
+  s.FSLA.y
+    Which is: 4
+  44.0
+    Which is: 44
+
+[  FAILED  ] GerberViewer.FSLA (0 ms)
+[ RUN      ] GerberViewer.MO
+[       OK ] GerberViewer.MO (0 ms)
+[ RUN      ] GerberViewer.IP
+[       OK ] GerberViewer.IP (0 ms)
+[ RUN      ] GerberViewer.MI
+unknown file: Failure
+C++ exception with description "stoll" thrown in the test body.
+
+[  FAILED  ] GerberViewer.MI (0 ms)
+[ RUN      ] GerberViewer.SF
+unknown file: Failure
+C++ exception with description "stoll" thrown in the test body.
+
+[  FAILED  ] GerberViewer.SF (0 ms)
+[----------] 5 tests from GerberViewer (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] GerberViewer.FSLA
+[  FAILED  ] GerberViewer.MI
+[  FAILED  ] GerberViewer.SF
+
+ 3 FAILED TESTS

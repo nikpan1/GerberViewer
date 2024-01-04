@@ -2,7 +2,7 @@
 
 # Minimum required version of CMake and Cpp 
 cmake_minimum_required(VERSION 3.12)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_COMPILER g++)
 
@@ -26,7 +26,6 @@ set(HEADERS
 
 # Source files
 set(SOURCES
-  src/Application.cpp
   src/Parser.cpp
   src/Core.cpp
   src/Cords.cpp
@@ -36,7 +35,10 @@ set(SOURCES
 
 
 # Executable
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}) 
+add_executable(${PROJECT_NAME} 
+  src/Application.cpp
+  ${SOURCES} 
+  ${HEADERS}) 
 
 include_directories(${CMAKE_SOURCE_DIR}/src
   ${CMAKE_SOURCE_DIR}/include # is it needed? 
@@ -47,10 +49,21 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 # Check the build type
 if(CMAKE_BUILD_TYPE STREQUAL "Tests") 
-  target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
+  include_directories(${GTEST_INCLUDE_DIRS})
+  
+  set(TESTS 
+       tests/test_Settings.cpp
+    )
+
+  add_executable(tests ${TESTS} ${SOURCES} ${HEADERS})
+
+  target_link_libraries(tests ${GTEST_LIBRARIES} pthread)
   enable_testing()
-  add_test(test ${PROJECT_NAME})
+
+  gtest_discover_tests(tests)
+ 
   target_compile_definitions(${PROJECT_NAME} PRIVATE gvDEBUG)
+  target_compile_definitions(tests PRIVATE gvDEBUG)
   message("Building in Tests mode.")
 
 elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")

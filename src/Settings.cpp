@@ -4,7 +4,7 @@
 void gv::Settings::Setup(const std::string& line) {
   std::string sub = line.substr(1, 2);
 
-  if("FSLA" == sub) {
+  if("FS" == sub) {
     FSLA.x = gv::Cords::GetX(line);
     FSLA.y = gv::Cords::GetY(line);
   }
@@ -26,3 +26,16 @@ void gv::Settings::Setup(const std::string& line) {
   gvLOG("NEW SETUP: " + line);
   }
 }
+
+
+std::ostream& operator<<(std::ostream& os, const gv::Settings& obj) {
+  os << "[ SETTINGS ]\n";
+  os << "FSLA = (" << obj.FSLA.x << ", " << obj.FSLA.y << ")\n";
+  os << "SF = (" << obj.SF.x << ", " << obj.SF.y << ")\n";
+  os << "MO = " << obj.MO << "\n";
+  os << "MI = (" << obj.MI.x << ", " << obj.MI.y << ")\n";
+  os << "IP = " << obj.IP << "\n";
+
+  return os; 
+}
+

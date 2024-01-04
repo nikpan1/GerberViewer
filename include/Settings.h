@@ -22,7 +22,6 @@ public:
   Settings() { }
   void Setup(const std::string& line);
 
-private:
   Cords FSLA;
   Cords SF; // X - A,  Y - B 
   MO_TYPE MO;
