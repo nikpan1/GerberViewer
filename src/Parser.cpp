@@ -15,7 +15,7 @@ gv::Expression gv::Parser::ParseLine(const std::string& line) {
   // then depending on the rest add expreesion new 
  
   gv::Expression result;
-
+  
 
 
   return result;
@@ -24,10 +24,16 @@ gv::Expression gv::Parser::ParseLine(const std::string& line) {
 std::vector<gv::Expression>& gv::Parser::Parse() {
   std::string line;
 
-
-  while(std::getline(input, line)) {
-    output.push_back(ParseLine(line));
+  gv::Settings settings; 
+  
+  while(std::getline(input, line) && line[0] == '%') {
+    // analyze settings and registers
   }
+
+
+  do {
+    output.push_back(ParseLine(line));
+  } while(std::getline(input, line)); 
   
   return output;
 }

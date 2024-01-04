@@ -19,6 +19,8 @@ set(HEADERS
   include/Cords.h
   include/Expression.h
   include/Drawable.h
+  include/Register.h 
+  include/Settings.h 
 )
 
 
@@ -29,7 +31,7 @@ set(SOURCES
   src/Core.cpp
   src/Cords.cpp
   src/Expression.cpp 
-  src/Drawable.cpp 
+  src/Settings.cpp 
 )
 
 

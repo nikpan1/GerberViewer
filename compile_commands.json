@@ -115,14 +115,14 @@
    "-std=gnu++11",
    "-MD",
    "-MT",
-   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o",
    "-MF",
-   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o.d",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o.d",
    "-o",
-   "CMakeFiles/GerberViewer.dir/src/Drawable.cpp.o",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o",
    "-c",
-   "/home/archbtw/dev/GerberViewer/src/Drawable.cpp"
+   "/home/archbtw/dev/GerberViewer/src/Settings.cpp"
   ],
-  "file": "/home/archbtw/dev/GerberViewer/src/Drawable.cpp"
+  "file": "/home/archbtw/dev/GerberViewer/src/Settings.cpp"
  }
 ]

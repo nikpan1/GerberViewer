@@ -1,10 +1,12 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 #include "Core.cpp"
 #include "Expression.h"
-
+#include "Settings.h"
+#include "Register.h" 
 
 namespace gv {
 #ifndef PARSER_H
@@ -19,6 +21,7 @@ private:
   std::vector<Expression> output;
 public:
   std::vector<Expression>& Parse();  
+  std::unordered_map<int, Register> registers;
 };
 
 #endif
