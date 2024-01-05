@@ -15,8 +15,10 @@ gv::Expression gv::Parser::ParseLine(const std::string& line) {
   // then depending on the rest add expreesion new 
  
   gv::Expression result;
-  
 
+  setting.Setup(line);
+  register.Setup(line);
+  // ...
 
   return result;
 }

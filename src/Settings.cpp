@@ -25,6 +25,7 @@ void gv::Settings::Setup(const std::string& line) {
   else {
   gvLOG("NEW SETUP: " + line);
   }
+
 }
 
 

@@ -15,6 +15,7 @@ namespace gv {
 class Parser {
 public:
   Parser(const std::string& FILENAME);
+  gv::Settings setting;
 private:
   std::ifstream input;
   Expression ParseLine(const std::string& line);
