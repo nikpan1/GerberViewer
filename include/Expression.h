@@ -1,17 +1,13 @@
-#include "Core.cpp"
-#include "Drawable.h" 
+#ifndef EXPRESSION_H
+#define EXPRESSION_H 
 
 namespace gv {
 
-#ifndef EXPRESSION_H
-#define EXPRESSION_H
+  class Expression {
+    public:
+      Expression() {}
+  };
 
-class Expression : public Drawable {
-  public:
-    Expression() {}
-
-    friend std::ostream& operator<<(std::ostream& os, const Expression& obj); 
-};
+}
 
 #endif 
-}

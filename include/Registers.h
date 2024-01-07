@@ -1,21 +1,28 @@
-#include <unordered_map> 
-#include "Aperture.h"
-#include "Core.cpp"
-
-namespace gv {
 #ifndef REGISTERS_H
 #define REGISTERS_H 
 
+#include <string>
+#include <vector>
+#include <utility> 
+
+#include "Aperture.h"
+#include "Core.cpp"
+
+
+namespace gv {
 
 class Registers {
 public:
   Registers() {};
   Aperture operator[](int index) const;
-
+  void Add(Aperture aperture);
+  void Setup(const std::string& line);
 private:
-  std::unordered_map<int, Aperture> regs;
+  std::vector<std::pair<int, Aperture>> regs;
 };
 
-#endif 
 
 }
+
+
+#endif 

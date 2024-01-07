@@ -17,7 +17,6 @@ gv::Expression gv::Parser::ParseLine(const std::string& line) {
   gv::Expression result;
 
   setting.Setup(line);
-  register.Setup(line);
   // ...
 
   return result;

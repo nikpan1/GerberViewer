@@ -17,10 +17,11 @@ find_package(GTest REQUIRED)
 set(HEADERS
   include/Parser.h
   include/Cords.h
-  include/Expression.h
   include/Drawable.h
-  include/Register.h 
+  include/Registers.h 
   include/Settings.h 
+  include/Aperture.h 
+  include/Expression.h
 )
 
 
@@ -29,8 +30,9 @@ set(SOURCES
   src/Parser.cpp
   src/Core.cpp
   src/Cords.cpp
-  src/Expression.cpp 
-  src/Settings.cpp 
+  src/Settings.cpp
+  src/Registers.cpp
+  src/Aperture.cpp
 )
 
 
@@ -52,8 +54,9 @@ if(CMAKE_BUILD_TYPE STREQUAL "Tests")
   include_directories(${GTEST_INCLUDE_DIRS})
   
   set(TESTS 
-       tests/test_Settings.cpp
-    )
+      tests/test_Settings.cpp
+      tests/test_Registers.cpp  
+  )
 
   add_executable(tests ${TESTS} ${SOURCES} ${HEADERS})
 

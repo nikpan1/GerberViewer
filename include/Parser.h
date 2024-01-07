@@ -6,7 +6,7 @@
 #include "Core.cpp"
 #include "Expression.h"
 #include "Settings.h"
-#include "Register.h" 
+#include "Registers.h" 
 
 namespace gv {
 #ifndef PARSER_H
@@ -22,7 +22,7 @@ private:
   std::vector<Expression> output;
 public:
   std::vector<Expression>& Parse();  
-  std::unordered_map<int, Register> registers;
+  gv::Registers registers;
 };
 
 #endif
