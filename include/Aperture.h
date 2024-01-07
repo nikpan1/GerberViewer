@@ -1,5 +1,5 @@
 #include "Cords.h" 
-
+#include "Core.cpp"
 
 namespace gv {
 #ifndef APERTURE_H
@@ -24,6 +24,9 @@ class Aperture {
     REG_TYPE type;
     Cords pos;
     int index;
+
+    bool operator==(const gv::Aperture& obj) const; 
+ 
 };
 
 #endif 

@@ -55,7 +55,8 @@ if(CMAKE_BUILD_TYPE STREQUAL "Tests")
   
   set(TESTS 
       tests/test_Settings.cpp
-      tests/test_Registers.cpp  
+      tests/test_Registers.cpp
+      tests/test_Aperture.cpp
   )
 
   add_executable(tests ${TESTS} ${SOURCES} ${HEADERS})
