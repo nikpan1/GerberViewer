@@ -15,14 +15,14 @@ bool gv::Aperture::operator==(const gv::Aperture& obj) const {
 
 
 void gv::Aperture::Setup(const std::string& line) {
-  int start = 4, end = 5;
-  while(isNumber(line[end + 1])) end ++;
+  int start = 4, end = 4;
+  while(isNumber(line[end])) end ++;
   gv::Aperture ap;
   
   ap.index = std::stoi(line.substr(start, end - start));
 
   gv::REG_TYPE tp;
-  switch (line[end + 1]) { 
+  switch (line[end]) { 
     case 'C':
       tp = CIRCLE;
       break;

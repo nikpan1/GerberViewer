@@ -1,6 +1,16 @@
 #include "Aperture.h" 
 #include <gtest/gtest.h>
 
+TEST(GerberViewer, Aperture_type) {
+  gv::Aperture ap;
+  
+  ap.Setup("%ADD11C,1.32100*%");
+  EXPECT_EQ(ap.type, gv::CIRCLE);
+ 
+  ap.Setup("%ADD11R,1.32100X1.0000*%");
+  EXPECT_EQ(ap.type, gv::RECTANGLE);
+}
+
 TEST(GerberViewer, Aperture) {
   gv::Aperture ap;
 
