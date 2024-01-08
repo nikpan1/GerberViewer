@@ -17,44 +17,40 @@ bool gv::Aperture::operator==(const gv::Aperture& obj) const {
 void gv::Aperture::Setup(const std::string& line) {
   int start = 4, end = 4;
   while(isNumber(line[end])) end ++;
-  gv::Aperture ap;
   
-  ap.index = std::stoi(line.substr(start, end - start));
+  index = std::stoi(line.substr(start, end - start));
 
-  gv::REG_TYPE tp;
   switch (line[end]) { 
     case 'C':
-      tp = CIRCLE;
+      type = CIRCLE;
       break;
     case 'R':
-      tp = RECTANGLE;
+      type = RECTANGLE;
       break;
     case 'P':
-      tp = POLYGON;
+      type = POLYGON;
       break;
     case 'O':
-      tp = OBROUND;
+      type = OBROUND;
       break;
     default: 
       gvLOG("REG_TYPE NOT FOUND.");
   }
   
-  ap.type = tp;
-  
-  if(tp == CIRCLE) {
+  if(type == CIRCLE) {
     start = 5;
     while(line[start] != ',') start ++;
-    ap.pos.x = std::stoi(line.substr(start + 1, line.size() - start - 3)); 
+    pos.x = std::stoi(line.substr(start + 1, line.size() - start - 3)); 
   }
-  else if(tp == RECTANGLE) {
+  else if(type == RECTANGLE) {
 
     start = 5;
     while(line[start] != ',') start ++;
     int X_pos = start;
     while(line[X_pos] != 'X') X_pos ++;
 
-    ap.pos.x = std::stoi(line.substr(start + 1, X_pos - 1 - start)); 
-    ap.pos.y = std::stoi(line.substr(X_pos + 1, line.size() - 2));   
+    pos.x = std::stoi(line.substr(start + 1, X_pos - 1 - start)); 
+    pos.y = std::stoi(line.substr(X_pos + 1, line.size() - 2));   
   }
 
 }
