@@ -2,10 +2,10 @@
 #include "Cords.h" 
 #include "Core.cpp"
 
-namespace gv {
-
 #ifndef SETTINGS_H
 #define SETTINGS_H 
+
+namespace gv {
 
 enum MO_TYPE {
   MM = 0,
@@ -30,5 +30,6 @@ public:
 };
 
 
-#endif 
 }
+
+#endif 

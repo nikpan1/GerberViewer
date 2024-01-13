@@ -1,12 +1,11 @@
 %FSLAX33Y33*%
 %MOMM*%
 %SFA1.000B1.000*%
-
 %MIA0B0*%
 %IPPOS*%
 %ADD901C,0.01000*%
 %ADD903C,0.25000*%
-%LNkleineplatinever11.dri*%
+%LNkleinepla.dri*%
 %LPD*%
 G54D901*
 X0Y50600D02*
