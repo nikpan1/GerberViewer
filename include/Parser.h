@@ -1,30 +1,37 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <unordered_map>
 
 #include "Core.cpp"
 #include "Expression.h"
 #include "Settings.h"
 #include "Registers.h" 
 
-namespace gv {
 #ifndef PARSER_H
 #define PARSER_H
+
+namespace gv {
 
 class Parser {
 public:
   Parser(const std::string& FILENAME);
-  gv::Settings setting;
+  gv::Settings _settings;
+
 private:
   std::ifstream input;
-  Expression ParseLine(const std::string& line);
   std::vector<Expression> output;
+  
+  Expression ParseLine(const std::string& line);
+  void ParseSettings(const std::string& line); 
+
+
 public:
   std::vector<Expression>& Parse();  
-  gv::Registers registers;
+  gv::Registers _registers;
 };
 
-#endif
 }
+
+#endif
+
 

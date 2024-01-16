@@ -7,8 +7,10 @@ int main(int argc, char** argv) {
   gvASSERT(argc == 2, "Wrong amount of inputs.");
 
   std::string str = argv[1];
-  auto v = gv::Parser(str);
   
+  auto v = gv::Parser(str);
+  v.Parse();
+
   return 0;
 }
 

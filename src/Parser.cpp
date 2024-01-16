@@ -10,35 +10,52 @@ gv::Parser::Parser(const std::string& FILENAME) {
 }
 
 
-gv::Expression gv::Parser::ParseLine(const std::string& line) {
+void gv::Parser::ParseLine(const std::string& line) {
   // analyze the first line
   // then depending on the rest add expreesion new 
- 
-  gv::Expression result;
+  
+  // G54
+  // X...Y...D..
+  // X...Y...
+  // G01X...Y...D...
+  // M02 
+  
 
-  setting.Setup(line);
-  // ...
+}
 
-  return result;
+void gv::Parser::ParseSettings(const std::string& line) {
+  // depending on the content, setup settings 
+
+  // FSLA
+  // MM/INCH
+  // SFA
+  // MIA
+  // IPPOS
+  // LPD ?
+
+  _settings.Setup(line);
+
+  // ADD aperture, store in registers
+
+  _registers.Setup(line);
 }
 
 std::vector<gv::Expression>& gv::Parser::Parse() {
   std::string line;
 
-  gv::Settings settings; 
+  gv::Settings _settingss; 
   
+  // analyze Settings 
   while(std::getline(input, line) && line[0] == '%') {
-    // analyze settings and registers
-    if("ADD" == line.substr(1, 3)) {
-    }
+    ParseSettings(line);
+  }  
 
-  }
-
-
+  // analyze movement instructions 
   do {
-    output.push_back(ParseLine(line));
+    ParseLine(line);
   } while(std::getline(input, line)); 
-  
+
+
   return output;
 }
 
