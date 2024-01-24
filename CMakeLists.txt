@@ -23,11 +23,14 @@ set(HEADERS
   include/Aperture.h 
   include/Expression.h
   
+  include/Drawer.h
+
   include/Instructions/Instruction.h
   include/Instructions/SelectInstruction.h
   include/Instructions/DCodes/DrawInstruction.h 
   include/Instructions/DCodes/FlashInstruction.h 
   include/Instructions/DCodes/MoveInstruction.h
+  
   )
 
 
@@ -39,6 +42,7 @@ set(SOURCES
   src/Settings.cpp
   src/Registers.cpp
   src/Aperture.cpp
+  src/strManipulation.cpp 
 )
 
 
