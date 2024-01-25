@@ -1,4 +1,5 @@
 #include "Parser.h"
+#include "Instructions/Instruction.h"
 
 
 gv::Parser::Parser(const std::string& FILENAME) {
@@ -34,14 +35,26 @@ void gv::Parser::ParseLine(const std::string& line) {
   }
   else if(line[0] == 'X' || line[1] == 'Y') {
     if(Contains(line, 'D')) { // X...Y...D..
-    
+      if(line[line.size() - 2] == '2') { // move instruction 
+        output.push_back(MoveInstruction(line)); 
+      }
+      else if(line[line.size() - 2] == '1') { // draw instruction 
+        output.push_back(DrawInstruction(line));
+      }
+      else if(line[line.size() - 2] == '3') { // flash instruction 
+        output.push_back(FlashInstruction(line));
+      }
+      else {
+        gvEXCEPTION("Dcode Instruction not found.");
+      }
+
     }
     else { // X...Y...
       
     }
   }
-  else if(line.substr(0, 3) == "M02") {
-  
+  else if(line.substr(0, 3) == "M02") { // M2 
+    output.push_back(EOF_Instruction(line));   
   }
   else {
     gvLOG("NOT FOUND | " << line);
@@ -65,7 +78,7 @@ void gv::Parser::ParseSettings(const std::string& line) {
   _registers.Setup(line);
 }
 
-std::vector<gv::Expression>& gv::Parser::Parse() {
+std::vector<gv::Instruction>& gv::Parser::Parse() {
   std::string line;
 
   gv::Settings _settingss; 
