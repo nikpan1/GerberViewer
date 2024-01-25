@@ -9,6 +9,16 @@ gv::Parser::Parser(const std::string& FILENAME) {
   output.clear();
 }
 
+static bool Contains(const std::string& line, char c) {
+  for(int i = line.size() - 1; i >= 0; i --) {
+    if(line[i] == c) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 
 void gv::Parser::ParseLine(const std::string& line) {
   // analyze the first line
@@ -20,7 +30,22 @@ void gv::Parser::ParseLine(const std::string& line) {
   // G01X...Y...D...
   // M02 
   
-
+  if(line[0] == 'G') { // G54 
+  }
+  else if(line[0] == 'X' || line[1] == 'Y') {
+    if(Contains(line, 'D')) { // X...Y...D..
+    
+    }
+    else { // X...Y...
+      
+    }
+  }
+  else if(line.substr(0, 3) == "M02") {
+  
+  }
+  else {
+    gvLOG("NOT FOUND | " << line);
+  }
 }
 
 void gv::Parser::ParseSettings(const std::string& line) {

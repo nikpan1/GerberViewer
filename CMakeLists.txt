@@ -42,7 +42,6 @@ set(SOURCES
   src/Settings.cpp
   src/Registers.cpp
   src/Aperture.cpp
-  src/strManipulation.cpp 
 )
 
 

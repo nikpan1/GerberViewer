@@ -1,3 +1,7 @@
+#ifndef PARSER_H
+#define PARSER_H
+
+
 #include <fstream>
 #include <vector>
 #include <string>
@@ -6,9 +10,6 @@
 #include "Expression.h"
 #include "Settings.h"
 #include "Registers.h" 
-
-#ifndef PARSER_H
-#define PARSER_H
 
 namespace gv {
 
@@ -21,7 +22,7 @@ private:
   std::ifstream input;
   std::vector<Expression> output;
   
-  Expression ParseLine(const std::string& line);
+  void ParseLine(const std::string& line);
   void ParseSettings(const std::string& line); 
 
 

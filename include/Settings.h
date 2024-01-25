@@ -2,7 +2,6 @@
 
 #include "Cords.h" 
 #include "Core.cpp"
-#include "strManipulation.cpp"
 
 #ifndef SETTINGS_H
 #define SETTINGS_H 

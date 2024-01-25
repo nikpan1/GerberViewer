@@ -42,8 +42,7 @@ void gv::Aperture::Setup(const std::string& line) {
     while(line[start] != ',') start ++;
     pos.x = std::stoi(line.substr(start + 1, line.size() - start - 3)); 
   }
-  else if(type == RECTANGLE) {
-
+  else if(type == RECTANGLE || type == OBROUND || type == CIRCLE) {
     start = 5;
     while(line[start] != ',') start ++;
     int X_pos = start;
