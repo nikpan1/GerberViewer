@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="tabsWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -26,7 +26,7 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="tab_1">
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
@@ -85,14 +85,55 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
-     <widget class="QTableView" name="tableView">
+     <widget class="QTableWidget" name="FeederTable">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>60</y>
-        <width>256</width>
-        <height>192</height>
+        <x>0</x>
+        <y>0</y>
+        <width>611</width>
+        <height>331</height>
        </rect>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Feeder Type[mm]</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Code</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Label</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Skip</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="ImportButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>20</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Import</string>
       </property>
      </widget>
     </widget>
