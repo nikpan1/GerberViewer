@@ -136,6 +136,19 @@
        <string>Import</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -148,6 +161,12 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuGerber_Viewer_v0_1">
+    <property name="title">
+     <string>Gerber Viewer v0.1</string>
+    </property>
+   </widget>
+   <addaction name="menuGerber_Viewer_v0_1"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
