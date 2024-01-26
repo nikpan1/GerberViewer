@@ -99,7 +99,7 @@
       <row/>
       <column>
        <property name="text">
-        <string>ID</string>
+        <string>Id</string>
        </property>
       </column>
       <column>
@@ -136,7 +136,7 @@
        <string>Import</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="SaveButton">
       <property name="geometry">
        <rect>
         <x>620</x>
@@ -147,6 +147,19 @@
       </property>
       <property name="text">
        <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ReloadButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reload</string>
       </property>
      </widget>
     </widget>
