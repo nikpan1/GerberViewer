@@ -8,17 +8,17 @@ The Gerber layer format is a 2D bi-level vector image format: the image is defin
 values, typically labeled black and white.
 
 ## Dependencies
-CPP 17
-CMAKE 3.3
-Google Tests 1.8
-SDL 2.0
-OpenCV 4.8.0
-QT 6.6
+CPP 17<br>
+CMAKE 3.3<br>
+Google Tests 1.8<br>
+SDL 2.0<br>
+OpenCV 4.8.0<br>
+QT 6.6<br>
 
 ## Additional resources
-Official gerber data file format - https://www.ucamco.com/files/downloads/file_en/456/gerber-layer-format-specification-revision-2023-08_en.pdf?af3d09a62ff8542a6bbdc41b5b706612
-Tokenization from - https://craftinginterpreters.com/
-Homography usage - https://docs.opencv.org/3.4/d7/dff/tutorial_feature_homography.html
+Official gerber data file format - https://www.ucamco.com/files/downloads/file_en/456/gerber-layer-format-specification-revision-2023-08_en.pdf?af3d09a62ff8542a6bbdc41b5b706612<br>
+Tokenization from - https://craftinginterpreters.com/<br>
+Homography usage - https://docs.opencv.org/3.4/d7/dff/tutorial_feature_homography.html<br>
 
 
 #### Gerber data is something awful.
