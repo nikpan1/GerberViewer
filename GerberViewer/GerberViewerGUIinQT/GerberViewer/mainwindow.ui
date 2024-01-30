@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -41,31 +41,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QScrollArea" name="scrollArea">
-         <property name="widgetResizable">
-          <bool>true</bool>
-         </property>
-         <widget class="QWidget" name="scrollAreaWidgetContents_3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>507</width>
-            <height>317</height>
-           </rect>
-          </property>
-          <widget class="QGraphicsView" name="canvas">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>511</width>
-             <height>321</height>
-            </rect>
-           </property>
-          </widget>
-         </widget>
-        </widget>
+        <widget class="QGraphicsView" name="canvas"/>
        </item>
       </layout>
      </widget>

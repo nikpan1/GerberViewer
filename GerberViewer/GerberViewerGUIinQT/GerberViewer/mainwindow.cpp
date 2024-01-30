@@ -50,3 +50,21 @@ void MainWindow::on_ImportButton_clicked()
     }
 }
 
+
+void MainWindow::on_LoadGerberFile_clicked()
+{
+    QString filepath = QFileDialog::getOpenFileName(this, "Import Gerber data files:",
+                                                    QDir::rootPath(), "GB Files (*.bot)");
+
+    QFile mFile(filepath);
+
+    if(!mFile.open(QFile::Text | QFile::ReadOnly)) {
+        return;
+    }
+
+
+
+    mFile.flush();
+    mFile.close();
+}
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 12.0.1, 2024-01-26T19:42:30. -->
+<!-- Written by QtCreator 12.0.1, 2024-01-30T08:44:02. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -109,7 +109,7 @@
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -165,7 +165,7 @@
 -DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -175,7 +175,6 @@
       <value type="bool" key="CMakeProjectManager.MakeStep.ClearSystemEnvironment">false</value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.UserEnvironmentChanges"/>
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Build</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
      </valuemap>
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
@@ -192,7 +191,6 @@
       <value type="bool" key="CMakeProjectManager.MakeStep.ClearSystemEnvironment">false</value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.UserEnvironmentChanges"/>
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Build</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
      </valuemap>
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
@@ -221,7 +219,7 @@
 -DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-RelWithDebInfo</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-RelWithDebInfo</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -276,7 +274,7 @@
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -330,7 +328,7 @@
 -DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-MinSizeRel</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-MinSizeRel</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -394,14 +392,14 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">GerberViewerQT</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.GerberViewerQT</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">GerberViewerQT</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">GerberViewer</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.GerberViewer</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">GerberViewer</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/archbtw/dev/GerberViewer/build-GerberViewerQT-Desktop-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/archbtw/Github/GerberViewer/GerberViewer/GerberViewerGUIinQT/build-GerberViewer-Desktop-Debug</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
