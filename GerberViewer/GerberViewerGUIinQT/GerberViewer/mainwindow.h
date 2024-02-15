@@ -11,6 +11,10 @@
 #include <QStringList>
 #include <QFileDialog>
 
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGraphicsPixmapItem>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,6 +32,8 @@ public:
 
 private slots:
     void on_ImportButton_clicked();
+
+    void on_LoadGerberFile_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -62,9 +62,26 @@ void MainWindow::on_LoadGerberFile_clicked()
         return;
     }
 
-
-
     mFile.flush();
     mFile.close();
+
+    //view = new QGraphicsView(scene);
+
+    filepath[filepath.size() - 1] = 'g';
+    filepath[filepath.size() - 2] = 'n';
+    filepath[filepath.size() - 3] = 'p';
+
+    QPixmap pixmap(filepath);
+
+    if(pixmap.isNull()) {
+        qWarning("File not found");
+        return;
+    }
+
+    scene->addPixmap(pixmap);
+
+    ui->canvas->setScene(scene);
+    ui->canvas->show();
+
 }
 

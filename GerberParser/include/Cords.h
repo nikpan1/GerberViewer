@@ -1,9 +1,9 @@
-#include <string> 
 
-namespace gv {
 #ifndef CORDS_H
 #define CORDS_H
 
+#include <string> 
+namespace gv {
 
 class Cords {
 public: 
@@ -20,6 +20,8 @@ public:
   static double GetY(const std::string& line);
 };
 
+}
+
 #endif 
 
-}
+

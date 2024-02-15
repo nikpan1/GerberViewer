@@ -1,0 +1,13 @@
+1. Wczytaj ustawienia w Register
+2. Wrzucaj na stos każde polecenie używając polimorfizmy
+
+3. Prześlij oba obiekty do drawera
+4. Rysuj:
+    niech odczytuje jakie jest polecenie i niech przetrzymuje selected
+    w zależności od flagi niech rysuje/flashuje/idzie
+    niech rysuje za pomocą dodatkowej biblioteki graficznej i zapisuje temp zdjęcie otwierane później przez qt
+
+5. Używanie opencv do korekty homografii
+
+6. Wgrywanie programów i buildowanie kodu (parser)
+7. Elementy estetyczne i użytkowe
