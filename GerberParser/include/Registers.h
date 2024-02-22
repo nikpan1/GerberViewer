@@ -19,6 +19,9 @@ public:
   void Setup(const std::string& line);
 private:
   std::vector<std::pair<int, Aperture>> regs;
+public:
+  typedef dcode int;
+  dcode last_used;
 };
 
 

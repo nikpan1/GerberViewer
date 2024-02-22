@@ -11,7 +11,8 @@ project(GerberViewer)
 
 # external libraries
 find_package(GTest REQUIRED)
-
+set(SFML_FOUND TRUE)
+find_package(SFML COMPONENTS graphics REQUIRED) 
 
 # Header files
 set(HEADERS
@@ -56,6 +57,9 @@ include_directories(${CMAKE_SOURCE_DIR}/src
   )
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+
+# Link against SFML libraries 
+target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window sfml-system)
 
 
 # Check the build type

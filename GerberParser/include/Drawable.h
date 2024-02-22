@@ -1,9 +1,9 @@
+#ifndef DRAWABLE_H 
+#define DRAWABLE_H 
+
 #include "Core.cpp"
 
 namespace gv {
-
-#ifndef DRAWABLE_H 
-#define DRAWABLE_H 
 
 class Drawable {
 public:
@@ -12,6 +12,6 @@ public:
   } 
 };
 
-#endif
-
 }
+
+#endif

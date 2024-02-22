@@ -10,6 +10,49 @@ gv::Parser::Parser(const std::string& FILENAME) {
   output.clear();
 }
 
+int gv::Parser::getX(const std::string& line) {
+  std::smatch matches;
+  bool found = std::regex_search(line, matches, patternX);
+  if(!found) return -1;
+
+  std::string temp = matches[0];
+  
+  if(temp.empty())
+    gvLOG("Something unexpected is happening in gv::Parser::GetX().");
+  
+  temp.erase(temp.begin());
+  return std::stoi(temp);
+}
+
+int gv::Parser::getY(const std::string& line) {
+  std::smatch matches;
+  bool found = std::regex_search(line, matches, patternX);
+  if(!found) return -1;
+  
+  std::string temp = matches[0];
+  
+  if(temp.empty())
+    gvLOG("Something unexpected is happening in gv::Parser::GetD().");
+  
+  temp.erase(temp.begin());
+  return std::stoi(temp);
+}
+
+int gv::Parser::getD(const std::string& line) {
+  std::smatch matches;
+  bool found = std::regex_search(line, matches, patternD);
+  if(!found) return -1;
+  
+  std::string temp = matches[0];  
+
+  if(temp.empty())
+    gvLOG("Something unexpected is happening in gv::Parser::GetD().");
+  
+  temp.erase(temp.begin());
+  return std::stoi(temp);
+}
+
+
 static bool Contains(const std::string& line, char c) {
   for(int i = line.size() - 1; i >= 0; i --) {
     if(line[i] == c) {
@@ -30,7 +73,23 @@ void gv::Parser::ParseLine(const std::string& line) {
   // X...Y...
   // G01X...Y...D...
   // M02 
-  
+  if(line[0] == 'G') {
+    // deprecated expression if
+    // G...X...Y...D...
+
+    // change settings if 
+    // G... 
+  }
+
+  if(line[0] == 'X' || line[0] == 'Y' || line[0] == 'D') {
+    auto X = gv::Parser::GetX(line);
+    auto Y = gv::Parser::GetY(line);
+    auto D = gv::Parser::GetD(line);
+    X = (X == -1) ? 0 : X;
+    Y = (Y == -1) ? 0 : Y;
+    D = (D == -1) ? 0 : register.last_used;
+  }
+
   if(line[0] == 'G') { // G54 
   }
   else if(line[0] == 'X' || line[1] == 'Y') {
