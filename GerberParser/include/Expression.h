@@ -8,10 +8,10 @@ namespace gv {
   class Expression : Drawable{
     public:
       Expression() {}
+
+      int X, Y, D;
+
   };
-
-  int X, Y, D;
-
 }
 
 #endif 

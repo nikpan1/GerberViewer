@@ -9,7 +9,8 @@ int main(int argc, char** argv) {
   std::string str = argv[1];
   
   auto v = gv::Parser(str);
-  v.Parse();
+  auto path = v.Run();
+  gvLOG(path);
 
   return 0;
 }

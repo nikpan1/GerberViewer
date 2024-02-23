@@ -10,10 +10,8 @@ public:
     DeprExpression() {}    
 
     int GCode;
-
+};
 }
 
-
-}
 
 #endif

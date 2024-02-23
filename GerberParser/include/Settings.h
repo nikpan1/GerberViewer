@@ -28,7 +28,8 @@ public:
   MO_TYPE MO;
   Cords MI;
   IP_TYPE IP;
-
+public:
+  int last_used; // dcode
 #ifdef gvDEBUG 
   const std::string Debug();
 #endif 

@@ -1,0 +1,149 @@
+[
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Application.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Application.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Application.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Parser.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Parser.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Parser.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Core.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Core.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Core.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Cords.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Cords.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Cords.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Settings.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Settings.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Settings.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Registers.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Registers.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Registers.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Registers.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Registers.cpp"
+ },
+ {
+  "directory": "/home/archbtw/Github/GerberViewer/GerberParser/build",
+  "arguments": [
+   "/usr/bin/g++",
+   "-DgvDEBUG",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/src",
+   "-I/home/archbtw/Github/GerberViewer/GerberParser/include",
+   "-g",
+   "-std=gnu++14",
+   "-MD",
+   "-MT",
+   "CMakeFiles/GerberViewer.dir/src/Aperture.cpp.o",
+   "-MF",
+   "CMakeFiles/GerberViewer.dir/src/Aperture.cpp.o.d",
+   "-o",
+   "CMakeFiles/GerberViewer.dir/src/Aperture.cpp.o",
+   "-c",
+   "/home/archbtw/Github/GerberViewer/GerberParser/src/Aperture.cpp"
+  ],
+  "file": "/home/archbtw/Github/GerberViewer/GerberParser/src/Aperture.cpp"
+ }
+]

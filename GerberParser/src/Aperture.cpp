@@ -14,7 +14,7 @@ bool gv::Aperture::operator==(const gv::Aperture& obj) const {
 }
 
 
-void gv::Aperture::Setup(const std::string& line) {
+void gv::Aperture::Setup(const std::string& line) { 
   int start = 4, end = 4;
   while(isNumber(line[end])) end ++;
   
