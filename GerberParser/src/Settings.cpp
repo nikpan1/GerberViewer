@@ -23,7 +23,7 @@ void gv::Settings::Setup(const std::string& line) {
     IP = (line[3] == 'P') ? POS : NEG;
   }
   else {
-  gvLOG("NEW SETUP: " + line);
+  //
   }
 
 }

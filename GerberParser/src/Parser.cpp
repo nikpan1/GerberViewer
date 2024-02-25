@@ -69,7 +69,7 @@ std::string gv::Parser::Run() {
   auto parsed = Parse(); 
 
 
-return created_path;
+  return created_path;
 }
 
 void gv::Parser::ParseLine(const std::string& line) {
@@ -114,8 +114,9 @@ void gv::Parser::ParseSettings(const std::string& line) {
   _settings.Setup(line);
 
   // ADD aperture, store in registers
-
+  gvLOG(line);
   _registers.Setup(line);
+  gvLOG(_registers.Debug());
 }
 
 std::vector<gv::Instruction>& gv::Parser::Parse() {

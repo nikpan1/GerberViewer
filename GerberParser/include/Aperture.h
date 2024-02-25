@@ -1,12 +1,15 @@
+#ifndef APERTURE_H
+#define APERTURE_H 
+
 #include <sstream> 
+#include <iostream>
+#include <regex>
+#include <string>
 
 #include "Cords.h" 
 #include "Core.cpp"
 
 namespace gv {
-#ifndef APERTURE_H
-#define APERTURE_H 
-
 enum REG_TYPE {
   CIRCLE = 0,
   RECTANGLE = 1,
@@ -35,5 +38,6 @@ class Aperture {
 
 };
 
-#endif 
 }
+
+#endif 

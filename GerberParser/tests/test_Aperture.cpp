@@ -13,13 +13,14 @@ TEST(GerberViewer, Aperture_type) {
 
 TEST(GerberViewer, Aperture) {
   gv::Aperture ap;
+  // type x y index 
 
 
   ap.Setup("%ADD11C,1.32100*%");
-  EXPECT_EQ(gv::Aperture(gv::CIRCLE, 1.321, 0, 11), ap);
+  EXPECT_EQ(gv::Aperture(gv::CIRCLE, 1.321, 1.321, 11), ap);
 
   ap.Setup("%ADD910C,0.0110*%");
-  EXPECT_EQ(gv::Aperture(gv::CIRCLE, 0.011, 0, 910), ap);
+  EXPECT_EQ(gv::Aperture(gv::CIRCLE, 0.011, 0.011, 910), ap);
 
   // ---
 

@@ -77,7 +77,7 @@ void MainWindow::on_LoadGerberFile_clicked()
         qWarning("File not found");
         return;
     }
-
+    scene=new QGraphicsScene();
     scene->addPixmap(pixmap);
 
     ui->canvas->setScene(scene);

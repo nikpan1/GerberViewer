@@ -30,6 +30,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    QGraphicsScene* scene;
+
 private slots:
     void on_ImportButton_clicked();
 

@@ -14,44 +14,43 @@ bool gv::Aperture::operator==(const gv::Aperture& obj) const {
 }
 
 
-void gv::Aperture::Setup(const std::string& line) { 
-  int start = 4, end = 4;
-  while(isNumber(line[end])) end ++;
+void gv::Aperture::Setup(const std::string& line) {
+  if(!(line[1] == 'A' && line[3] == 'D')) return;
   
-  index = std::stoi(line.substr(start, end - start));
+  std::regex patternCircle("(%ADD([0-9]+)C,([[0-9].]+)*%)");
+  std::regex patternRect("(%ADD[0-9]+R,([[0-9].]+)X([[0-9].]+)*%)");
 
-  switch (line[end]) { 
-    case 'C':
-      type = CIRCLE;
-      break;
-    case 'R':
-      type = RECTANGLE;
-      break;
-    case 'P':
-      type = POLYGON;
-      break;
-    case 'O':
-      type = OBROUND;
-      break;
-    default: 
-      gvLOG("REG_TYPE NOT FOUND.");
-  }
+  std::smatch Cmatches;
   
-  if(type == CIRCLE) {
-    start = 5;
-    while(line[start] != ',') start ++;
-    pos.x = std::stoi(line.substr(start + 1, line.size() - start - 3)); 
-  }
-  else if(type == RECTANGLE || type == OBROUND || type == CIRCLE) {
-    start = 5;
-    while(line[start] != ',') start ++;
-    int X_pos = start;
-    while(line[X_pos] != 'X') X_pos ++;
+  bool found = std::regex_search(line, Cmatches, patternCircle);
+  if(found) {  // circle
+  gvLOG("\n");
+   for(auto a: Cmatches) gvLOG("A-"<< a); 
+    index = std::stoll(Cmatches[0]);
+    pos.x = std::stoll(Cmatches[1]);
+    pos.y = std::stoll(Cmatches[1]);
 
-    pos.x = std::stoi(line.substr(start + 1, X_pos - 1 - start)); 
-    pos.y = std::stoi(line.substr(X_pos + 1, line.size() - 2));   
+    return;
   }
 
+  std::smatch Rmatches;
+  found = std::regex_search(line, Rmatches, patternRect);
+  if(found) {  // rect
+    index = std::stoll(Rmatches[0]);
+    pos.x = std::stoll(Rmatches[1]);
+    pos.y = std::stoll(Rmatches[2]);
+
+    return;
+  }
+
+  // polygon obround
+  std::regex patternID("%ADD([0-9]+)(R|C|O|P)");
+  std::smatch IDmatches;
+  found = std::regex_search(line, IDmatches, patternID);
+  
+  for(auto a : IDmatches) gvLOG("FD" << a);
+  if(!found) index = 0;
+  else index = std::stoll(IDmatches[1]);
 }
 
 #ifdef gvDEBUG
