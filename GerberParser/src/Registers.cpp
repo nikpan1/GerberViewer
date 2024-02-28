@@ -25,9 +25,8 @@ gv::Aperture gv::Registers::Get(int id) {
 
 void gv::Registers::Setup(const std::string& line) {
   gv::Aperture ap; 
-  ap.Setup(line);
-
-  Add(ap);
+  bool success = ap.Setup(line);
+  if(success) Add(ap);
 }
 
 std::string gv::Registers::Debug() {

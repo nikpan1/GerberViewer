@@ -24,7 +24,7 @@ class Aperture {
     Aperture(REG_TYPE tp, double x, double y) : type(tp), pos(x, y) {}   
     Aperture(REG_TYPE tp, double x, double y, int i) : type(tp), pos(x, y), index(i) {}
     
-    void Setup(const std::string& line);
+    bool Setup(const std::string& line);
 
     REG_TYPE type;
     Cords pos;

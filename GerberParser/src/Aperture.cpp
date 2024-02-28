@@ -14,23 +14,22 @@ bool gv::Aperture::operator==(const gv::Aperture& obj) const {
 }
 
 
-void gv::Aperture::Setup(const std::string& line) {
-  if(!(line[1] == 'A' && line[3] == 'D')) return;
+bool gv::Aperture::Setup(const std::string& line) {
+  if(line[1] != 'A' || line[3] != 'D') return true;
   
-  std::regex patternCircle("(%ADD([0-9]+)C,([[0-9].]+)*%)");
-  std::regex patternRect("(%ADD[0-9]+R,([[0-9].]+)X([[0-9].]+)*%)");
+  std::regex patternCircle("%ADD[0-9]+C,[[0-9].]+*%");
+  std::regex patternRect(R"(%ADD\d+R,([\d.]+)X([\d.]+)\*%)");
 
   std::smatch Cmatches;
   
   bool found = std::regex_search(line, Cmatches, patternCircle);
   if(found) {  // circle
-  gvLOG("\n");
-   for(auto a: Cmatches) gvLOG("A-"<< a); 
     index = std::stoll(Cmatches[0]);
     pos.x = std::stoll(Cmatches[1]);
     pos.y = std::stoll(Cmatches[1]);
+    
 
-    return;
+    return true;
   }
 
   std::smatch Rmatches;
@@ -40,7 +39,8 @@ void gv::Aperture::Setup(const std::string& line) {
     pos.x = std::stoll(Rmatches[1]);
     pos.y = std::stoll(Rmatches[2]);
 
-    return;
+  gvLOG("PATTERN:" << index << " {" << pos.x << ", " << pos.y)
+    return true;
   }
 
   // polygon obround
@@ -48,9 +48,10 @@ void gv::Aperture::Setup(const std::string& line) {
   std::smatch IDmatches;
   found = std::regex_search(line, IDmatches, patternID);
   
-  for(auto a : IDmatches) gvLOG("FD" << a);
-  if(!found) index = 0;
+  if(!found) return false;
   else index = std::stoll(IDmatches[1]);
+  
+  return true;
 }
 
 #ifdef gvDEBUG

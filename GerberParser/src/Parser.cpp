@@ -114,9 +114,7 @@ void gv::Parser::ParseSettings(const std::string& line) {
   _settings.Setup(line);
 
   // ADD aperture, store in registers
-  gvLOG(line);
   _registers.Setup(line);
-  gvLOG(_registers.Debug());
 }
 
 std::vector<gv::Instruction>& gv::Parser::Parse() {
@@ -128,7 +126,7 @@ std::vector<gv::Instruction>& gv::Parser::Parse() {
   while(std::getline(input, line) && line[0] == '%') {
     ParseSettings(line);
   }  
-  gvLOG("SETST");
+  
   // analyze movement instructions 
   do {
     ParseLine(line);
