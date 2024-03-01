@@ -31,11 +31,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    clickableview* canvas;
+    clickableview* clickable_canvas;
     QGraphicsScene* scene;
     QGraphicsPixmapItem* pixmap_item;
     QPixmap pixmap;
     QSize scale;
+    bool is_current;
+    QPushButton* button;
+
+    int pos_counter = 0;
 
 
 private slots:
@@ -46,6 +50,12 @@ private slots:
     void on_ZoomIn_valueChanged(int value);
 
     void on_canvas_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
+
+    void on_x_text_textChanged();
+
+    void on_y_text_textChanged();
+
+    void on_addPosButton_clicked();
 
 private:
     Ui::MainWindow *ui;

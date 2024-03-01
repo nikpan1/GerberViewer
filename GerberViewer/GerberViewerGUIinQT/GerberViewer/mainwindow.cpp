@@ -7,15 +7,22 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    canvas = new clickableview(this);
-    ui->box->addWidget(canvas);
 
+    clickable_canvas = new clickableview(this);
+    clickable_canvas->pointer = ui->pointer;
+    clickable_canvas->x_text = ui->x_text;
+    clickable_canvas->y_text = ui->y_text;
+    ui->box->addWidget(clickable_canvas);
 }
+
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
 
 void MainWindow::on_ImportButton_clicked()
 {
@@ -54,6 +61,7 @@ void MainWindow::on_ImportButton_clicked()
 }
 
 
+
 void MainWindow::on_LoadGerberFile_clicked()
 {
     QString filepath = QFileDialog::getOpenFileName(this, "Import Gerber data files:",
@@ -81,27 +89,104 @@ void MainWindow::on_LoadGerberFile_clicked()
         return;
     }
     scene=new QGraphicsScene();
-    pixmap_item = scene->addPixmap(_pixmap);
 
-    canvas->setScene(scene);
-    canvas->show();
+    clickable_canvas->pixmapItem = scene->addPixmap(_pixmap);
+
+    clickable_canvas->setScene(scene);
+    clickable_canvas->show();
     pixmap = _pixmap;
-    scale = pixmap.size();
+    clickable_canvas->scale = pixmap.size();
 }
+
 
 
 void MainWindow::on_ZoomIn_valueChanged(int value)
 {    // Assuming pixmap_item is a QPixmap and pixmapItem is the QGraphicsPixmapItem
-    if (pixmap_item) {
+    if (clickable_canvas->pixmapItem) {
         // Update the scale of the pixmap
 
-        auto new_pixmap = pixmap.scaled(scale * value / 100, Qt::KeepAspectRatio);
+        auto new_pixmap = pixmap.scaled(clickable_canvas->scale * value / 100, Qt::KeepAspectRatio);
 
         // Set the scaled pixmap back to the QGraphicsPixmapItem
-
-        pixmap_item->setPixmap(new_pixmap);
+        clickable_canvas->pixmapItem->setPixmap(new_pixmap);
     }
 }
 
 
+
+
+void MainWindow::on_canvas_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint)
+{
+    is_current = true;
+}
+
+
+
+
+void MainWindow::on_x_text_textChanged()
+{
+    int x = ui->x_text->toPlainText().toInt();
+    int y = ui->y_text->toPlainText().toInt();
+
+    ui->pointer->move(x, y);
+}
+
+
+
+void MainWindow::on_y_text_textChanged()
+{
+    int x = ui->x_text->toPlainText().toInt();
+    int y = ui->y_text->toPlainText().toInt();
+
+    ui->pointer->move(x, y);
+}
+
+
+
+void MainWindow::on_addPosButton_clicked()
+{
+    // id
+    ui->pos_table->setItem(pos_counter, 0, new QTableWidgetItem(QString("%1").arg(pos_counter)));
+    // FeederType
+    ui->pos_table->setItem(pos_counter, 1, new QTableWidgetItem(ui->feeder_text->toPlainText()));
+    // XPos
+    ui->pos_table->setItem(pos_counter, 2, new QTableWidgetItem(ui->x_text->toPlainText()));
+    // YPos
+    ui->pos_table->setItem(pos_counter, 3, new QTableWidgetItem(ui->y_text->toPlainText()));
+
+    // is Zero
+    if(ui->isZero->isChecked()) {
+        ui->pos_table->setItem(pos_counter, 4, new QTableWidgetItem(QString("%1").arg(1)));
+    }
+    else {
+        ui->pos_table->setItem(pos_counter, 4, new QTableWidgetItem(QString("%1").arg(1)));
+    }
+
+    if(ui->isHomography->isChecked()) {
+        // is homo
+        ui->pos_table->setItem(pos_counter, 5, new QTableWidgetItem(QString("%1").arg(1)));
+
+    }
+    else {
+        // is homo
+        ui->pos_table->setItem(pos_counter, 5, new QTableWidgetItem(QString("%1").arg(0)));
+    }
+
+    if(ui->isHomography->isChecked() || ui->isZero->isChecked()) {
+
+        // XPos homo
+        ui->pos_table->setItem(pos_counter, 6, new QTableWidgetItem(ui->x_text_homo->toPlainText()));
+        // YPos homo
+        ui->pos_table->setItem(pos_counter, 7, new QTableWidgetItem(ui->y_text_homo->toPlainText()));
+    }
+    else {
+        // YPos homo
+        ui->pos_table->setItem(pos_counter, 6, new QTableWidgetItem(QString("%1").arg(0)));
+        // YPos homo
+        ui->pos_table->setItem(pos_counter, 7, new QTableWidgetItem(QString("%1").arg(0)));
+    }
+
+    pos_counter ++;
+    ui->pos_table->insertRow(pos_counter);
+}
 
