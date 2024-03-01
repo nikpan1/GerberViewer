@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>758</width>
-    <height>428</height>
+    <width>1194</width>
+    <height>725</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,12 +19,12 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>731</width>
-      <height>371</height>
+      <width>1161</width>
+      <height>671</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -35,11 +35,11 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>511</width>
-        <height>321</height>
+        <width>921</width>
+        <height>581</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="box">
        <item>
         <widget class="QGraphicsView" name="canvas"/>
        </item>
@@ -48,10 +48,10 @@
      <widget class="QWidget" name="horizontalLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>529</x>
-        <y>49</y>
+        <x>950</x>
+        <y>100</y>
         <width>191</width>
-        <height>281</height>
+        <height>251</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4"/>
@@ -59,10 +59,10 @@
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>529</x>
-        <y>9</y>
+        <x>950</x>
+        <y>20</y>
         <width>191</width>
-        <height>31</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -74,6 +74,33 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QSlider" name="ZoomIn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>600</y>
+        <width>271</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>949</x>
+        <y>369</y>
+        <width>191</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout"/>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -165,7 +192,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>758</width>
+     <width>1194</width>
      <height>22</height>
     </rect>
    </property>

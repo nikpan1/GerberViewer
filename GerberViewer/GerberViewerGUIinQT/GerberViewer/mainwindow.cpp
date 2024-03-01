@@ -7,6 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    canvas = new clickableview(this);
+    ui->box->addWidget(canvas);
+
 }
 
 MainWindow::~MainWindow()
@@ -71,17 +74,34 @@ void MainWindow::on_LoadGerberFile_clicked()
     filepath[filepath.size() - 2] = 'n';
     filepath[filepath.size() - 3] = 'p';
 
-    QPixmap pixmap(filepath);
+    QPixmap _pixmap(filepath);
 
-    if(pixmap.isNull()) {
+    if(_pixmap.isNull()) {
         qWarning("File not found");
         return;
     }
     scene=new QGraphicsScene();
-    scene->addPixmap(pixmap);
+    pixmap_item = scene->addPixmap(_pixmap);
 
-    ui->canvas->setScene(scene);
-    ui->canvas->show();
-
+    canvas->setScene(scene);
+    canvas->show();
+    pixmap = _pixmap;
+    scale = pixmap.size();
 }
+
+
+void MainWindow::on_ZoomIn_valueChanged(int value)
+{    // Assuming pixmap_item is a QPixmap and pixmapItem is the QGraphicsPixmapItem
+    if (pixmap_item) {
+        // Update the scale of the pixmap
+
+        auto new_pixmap = pixmap.scaled(scale * value / 100, Qt::KeepAspectRatio);
+
+        // Set the scaled pixmap back to the QGraphicsPixmapItem
+
+        pixmap_item->setPixmap(new_pixmap);
+    }
+}
+
+
 

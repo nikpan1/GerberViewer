@@ -1,8 +1,6 @@
 #include "custom_view.h"
 
-Custom_View::Custom_View(QWidget* parent = nullptr) : QGraphicsView(parent) {
 
-}
 
 void Custom_View::wheelEvent(QWheelEvent *event)
 {

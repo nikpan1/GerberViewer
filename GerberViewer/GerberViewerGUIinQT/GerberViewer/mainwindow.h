@@ -11,10 +11,12 @@
 #include <QStringList>
 #include <QFileDialog>
 
+#include <QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
+#include "clickableview.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,13 +31,21 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    clickableview* canvas;
     QGraphicsScene* scene;
+    QGraphicsPixmapItem* pixmap_item;
+    QPixmap pixmap;
+    QSize scale;
+
 
 private slots:
     void on_ImportButton_clicked();
 
     void on_LoadGerberFile_clicked();
+
+    void on_ZoomIn_valueChanged(int value);
+
+    void on_canvas_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
 
 private:
     Ui::MainWindow *ui;

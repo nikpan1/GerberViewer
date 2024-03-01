@@ -17,6 +17,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        clickableview.h
+        clickableview.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -39,6 +41,9 @@ else()
         add_executable(GerberViewer
             ${PROJECT_SOURCES}
             custom_view.h custom_view.cpp
+            clickableview.h clickableview.cpp
+
+
         )
     endif()
 endif()
