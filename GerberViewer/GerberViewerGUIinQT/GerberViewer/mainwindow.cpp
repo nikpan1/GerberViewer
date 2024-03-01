@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     clickable_canvas->x_text = ui->x_text;
     clickable_canvas->y_text = ui->y_text;
     ui->box->addWidget(clickable_canvas);
+    ui->savePath->setText(QDir::homePath() + "/temp/generated.BRD");
 }
 
 
@@ -27,7 +28,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_ImportButton_clicked()
 {
     QString filepath = QFileDialog::getOpenFileName(this, "Import Settings file:",
-                                                    QDir::rootPath(), "CSV Files (*.csv)");
+                                                    QDir::homePath(), "CSV Files (*.csv)");
 
     QFile mFile(filepath);
 
@@ -157,6 +158,8 @@ void MainWindow::on_addPosButton_clicked()
     // is Zero
     if(ui->isZero->isChecked()) {
         ui->pos_table->setItem(pos_counter, 4, new QTableWidgetItem(QString("%1").arg(1)));
+        zero_x = QString(ui->x_text_homo->toPlainText()).toInt();
+        zero_y = QString(ui->y_text_homo->toPlainText()).toInt();
     }
     else {
         ui->pos_table->setItem(pos_counter, 4, new QTableWidgetItem(QString("%1").arg(1)));
@@ -188,5 +191,84 @@ void MainWindow::on_addPosButton_clicked()
 
     pos_counter ++;
     ui->pos_table->insertRow(pos_counter);
+}
+
+
+void MainWindow::on_generate_button_clicked()
+{
+    QString templatePath = QDir::homePath() + "/temp/template";
+    QString generatedFilePath = QDir::homePath() + "/temp/generated.BRD";
+
+
+    QFile templateFile(templatePath);
+
+
+    if (templateFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        // Read the content of the template file
+        QTextStream templateStream(&templateFile);
+        QString templateContent = templateStream.readAll();
+        templateFile.close();
+
+        QFile generatedFile(generatedFilePath);
+
+        // Open the generated file in write-only mode
+        if (generatedFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream generatedStream(&generatedFile);
+
+            generatedStream << templateContent;
+
+            int rowCount = ui->pos_table->rowCount();
+            int columnCount = ui->pos_table->columnCount();
+
+
+            for (int row = 0; row < rowCount - 3; row ++) {
+                //ID
+                QString item = ui->pos_table->item(row, 0)->text();
+                generatedStream << QString("O%1\t").arg(item.toInt() + 2);
+                //FT
+                item = ui->pos_table->item(row, 1)->text();
+                generatedStream << QString("%1\t").arg(item);
+                // X
+                item = ui->pos_table->item(row, 2)->text();
+                generatedStream << QString("%1\t").arg(item);
+                // Y
+                item = ui->pos_table->item(row, 3)->text();
+                generatedStream << QString("%1\t").arg(item);
+                // mask
+                item = ui->pos_table->item(row, 4)->text();
+                generatedStream << "00010\n";
+
+            }
+
+            generatedStream << "I0   = 117.18   71.49  257.10   33.38";
+            generatedStream << "i0   =   0.00    0.00    0.00    0.00    11100";
+
+            for (int row = 0; row < rowCount - 3; row ++) {
+                //ID
+                QString item = ui->pos_table->item(row, 0)->text();
+                generatedStream << QString("M%1\t").arg(item);
+                //FT
+                item = ui->pos_table->item(row, 1)->text();
+                generatedStream << QString("%1\t").arg(item);
+
+
+                // X
+                item = ui->pos_table->item(row, 2)->text();
+                int value = item.toInt() - zero_x;
+                generatedStream << QString("%1\t").arg(value);
+                // Y
+                item = ui->pos_table->item(row, 3)->text();
+                value = item.toInt() - zero_y;
+                generatedStream << QString("%1\t").arg(value);
+
+
+                // mask
+                item = ui->pos_table->item(row, 4)->text();
+                generatedStream << "00010\n";
+            }
+
+            generatedFile.close();
+        }
+    }
 }
 

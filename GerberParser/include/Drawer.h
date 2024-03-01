@@ -2,6 +2,7 @@
 #define DRAWER_H
 
 #include "Parser.h" 
+#include <SFML/Graphics.hpp>
 
 namespace gv {
   class Drawer {

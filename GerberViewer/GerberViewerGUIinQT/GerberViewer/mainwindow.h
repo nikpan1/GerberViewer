@@ -41,6 +41,7 @@ public:
 
     int pos_counter = 0;
 
+    int zero_x = 0, zero_y = 0;
 
 private slots:
     void on_ImportButton_clicked();
@@ -56,6 +57,8 @@ private slots:
     void on_y_text_textChanged();
 
     void on_addPosButton_clicked();
+
+    void on_generate_button_clicked();
 
 private:
     Ui::MainWindow *ui;
