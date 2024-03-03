@@ -2,7 +2,7 @@
 
 ## About
 The repository contains an implementation of the Gerber data format parser written in C++. The created solution is used in the rest of the project, which is a program that uses the created bitmap to configure and create a program for the philips CSM 84 VIII machine.
-![Alt Text](https://github.com/nikpan1/GerberViewer/blob/master/docs/image.png?raw=true)
+![Alt Text](https://github.com/nikpan1/GerberViewer/blob/master/preview.png?raw=true)
 ## Gerber data 
 The Gerber layer format is a 2D bi-level vector image format: the image is defined by resolutionindependent graphical objects. Bi-level or binary images in each point take one of two possible
 values, typically labeled black and white.
